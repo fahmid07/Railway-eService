@@ -1,0 +1,16 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "d:\\javafx-sdk-17.0.1\\lib\\javafx.base.jar",
+        "d:\\javafx-sdk-17.0.1\\lib\\javafx.controls.jar",
+        "d:\\javafx-sdk-17.0.1\\lib\\javafx.fxml.jar",
+        "d:\\javafx-sdk-17.0.1\\lib\\javafx.graphics.jar",
+        "d:\\javafx-sdk-17.0.1\\lib\\javafx.media.jar",
+        "d:\\javafx-sdk-17.0.1\\lib\\javafx.swing.jar",
+        "d:\\javafx-sdk-17.0.1\\lib\\javafx.web.jar",
+        "d:\\javafx-sdk-17.0.1\\lib\\javafx-swt.jar",
+        "e:\\AUST CSE\\3.1\\CSE 3104 - Database Lab\\sqljdbc_9.4\\enu\\mssql-jdbc-9.4.1.jre8.jar"
+    ]
+}

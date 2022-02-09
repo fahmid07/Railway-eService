@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UpdateAccountController">
+   <children>
+      <ImageView fitHeight="142.0" fitWidth="288.0" layoutX="216.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="57.0" layoutY="119.0" text="Update Account" textFill="#2f5597">
+         <font>
+            <Font name="Barlow SemiBold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nametxt" layoutX="257.0" layoutY="137.0" prefHeight="36.0" prefWidth="264.0" promptText="Name" />
+      <TextField fx:id="emailtxt" layoutX="257.0" layoutY="192.0" prefHeight="36.0" prefWidth="264.0" promptText="Email" />
+      <TextField fx:id="mobiletxt" layoutX="257.0" layoutY="245.0" prefHeight="36.0" prefWidth="264.0" promptText="Mobile" />
+      <ImageView fitHeight="36.0" fitWidth="32.0" layoutX="201.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/phone.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="83.0" layoutX="200.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/password.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="83.0" layoutX="201.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/passwordIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="83.0" layoutX="201.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="64.0" layoutX="200.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/email.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="242.0" layoutY="456.0" mnemonicParsing="false" onAction="#CreateButton" prefHeight="38.0" prefWidth="117.0" text="Update Account" textFill="#2f5597">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="57.0" layoutY="53.0" mnemonicParsing="false" onAction="#BackButton" prefHeight="32.0" prefWidth="74.0" text="Back" textFill="#2f5597">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="389.0" layoutY="456.0" mnemonicParsing="false" onAction="#DeleteButton" prefHeight="38.0" prefWidth="117.0" text="Delete Account" textFill="#2f5597">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="errortxt" layoutX="257.0" layoutY="122.0" textFill="RED" />
+      <PasswordField fx:id="passtxt" layoutX="257.0" layoutY="348.0" prefHeight="32.0" prefWidth="264.0" promptText="Password" />
+      <PasswordField fx:id="conpasstxt" layoutX="257.0" layoutY="398.0" prefHeight="32.0" prefWidth="264.0" promptText="Confirm Password" />
+      <TextField fx:id="nidtxt" layoutX="256.0" layoutY="297.0" prefHeight="36.0" prefWidth="264.0" promptText="NID" />
+      <ImageView fitHeight="36.0" fitWidth="32.0" layoutX="200.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/nid.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

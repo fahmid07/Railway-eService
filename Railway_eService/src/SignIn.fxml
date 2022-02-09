@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SignInController">
+   <children>
+      <ImageView fitHeight="305.0" fitWidth="335.0" layoutX="192.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="152.0" layoutY="40.0" text="All e-service users can use their account in this application." textFill="#2f5597">
+         <font>
+            <Font name="Barlow Medium" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="mobiletxt" layoutX="276.0" layoutY="247.0" prefHeight="38.0" prefWidth="200.0" promptText="Mobile (ex: 018********)" />
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="221.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/phone.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="223.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/password.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="254.0" layoutY="367.0" mnemonicParsing="false" onAction="#SignInButton" prefHeight="38.0" prefWidth="91.0" text="Sign In" textFill="#2f5597">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="374.0" layoutY="367.0" mnemonicParsing="false" onAction="#SignUpButton" prefHeight="38.0" prefWidth="91.0" text="Sign Up" textFill="#2f5597">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="passtxt" layoutX="276.0" layoutY="301.0" prefHeight="38.0" prefWidth="200.0" promptText="Password" />
+      <Label layoutX="237.0" layoutY="466.0" text="For new user, please use Sign Up Button" textFill="#2f5597">
+         <font>
+            <Font name="Barlow Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="errortxt" layoutX="192.0" layoutY="202.0" text="Sign In using mobile number and password" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreateAccountController">
+   <children>
+      <ImageView fitHeight="142.0" fitWidth="288.0" layoutX="206.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="47.0" layoutY="109.0" text="New Account" textFill="#2f5597">
+         <font>
+            <Font name="Barlow SemiBold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nametxt" layoutX="247.0" layoutY="134.0" prefHeight="36.0" prefWidth="264.0" promptText="Name" />
+      <TextField fx:id="emailtxt" layoutX="247.0" layoutY="189.0" prefHeight="36.0" prefWidth="264.0" promptText="Email" />
+      <TextField fx:id="mobiletxt" layoutX="247.0" layoutY="242.0" prefHeight="36.0" prefWidth="264.0" promptText="Mobile" />
+      <ImageView fitHeight="36.0" fitWidth="32.0" layoutX="191.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/phone.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="83.0" layoutX="191.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="64.0" layoutX="190.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/email.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="291.0" layoutY="459.0" mnemonicParsing="false" onAction="#CreateButton" prefHeight="38.0" prefWidth="117.0" text="Create Account" textFill="#2f5597">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="47.0" layoutY="43.0" mnemonicParsing="false" onAction="#BackButton" prefHeight="32.0" prefWidth="74.0" text="Back" textFill="#2f5597">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="errortxt" layoutX="247.0" layoutY="112.0" textFill="RED">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nidtxt" layoutX="246.0" layoutY="294.0" prefHeight="36.0" prefWidth="264.0" promptText="NID" />
+      <ImageView fitHeight="36.0" fitWidth="32.0" layoutX="190.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/nid.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="83.0" layoutX="190.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/password.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="83.0" layoutX="191.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/passwordIcon.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="passtxt" layoutX="247.0" layoutY="349.0" prefHeight="32.0" prefWidth="264.0" promptText="Password" />
+      <PasswordField fx:id="conpasstxt" layoutX="247.0" layoutY="399.0" prefHeight="32.0" prefWidth="264.0" promptText="Confirm Password" />
+   </children>
+</AnchorPane>
