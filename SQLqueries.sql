@@ -21,3 +21,19 @@ create table "user"(
  drop table "user"
  
 Select * from "user"
+
+create table station(
+	s_id int identity(7000, 1),
+	s_name varchar(256) not null,
+	s_master varchar(100) not null,
+	sm_number varchar(11) not null
+	
+	constraint pk_sid primary key(s_id),
+	constraint chk_sm_number check(len(sm_number) = 11 and sm_number like '01%'),
+	constraint uq_sm_number unique(sm_number) 
+);
+drop table station
+Select * from station
+
+insert into station(s_name, s_master, sm_number) values
+('Chittagong', 'Rafiq Uddin', '01876096638');
