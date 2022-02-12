@@ -50,8 +50,22 @@ create table train(
 	startTime time,
 	endTime time
 	
-	constraint pk_tid primary key(t_id),
+	constraint pk_tid primary key(t_id)
 );
+
+insert into train(t_name, from_st, to_st, startTime, endTime) values
+('Subarna Express', 7000, 7001, '07:00:00', '12:20:00');
+
+insert into train(t_name, from_st, to_st, startTime, endTime) values
+('Chattala', 7000, 7001, '08:30:00', '15:50:00'),
+('Shonar Bangla', 7000, 7001, '17:00:00', '22:10:00'),
+('Turna Express', 7000, 7001, '23:00:00', '05:15:00');
+
+insert into train(t_name, from_st, to_st, startTime, endTime) values
+('Shonar Bangla', 7000, 7001, '07:00:00', '12:15:00'),
+('Mohanagar Provati', 7001, 7000, '07:45:00', '14:00:00'),
+('Shubarna Express', 7001, 7000, '16:30:00', '21:50:00'),
+('Turna Express', 7001, 7000, '23:30:00', '06:20:00');
 
 drop table train
 Select * from train
