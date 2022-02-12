@@ -38,7 +38,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="153.0" layoutY="274.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="109.0" stylesheets="@style.css" text="Coach View" textFill="WHITE">
+      <Button layoutX="153.0" layoutY="274.0" mnemonicParsing="false" onAction="#CoachviewButton" prefHeight="58.0" prefWidth="109.0" stylesheets="@style.css" text="Coach View" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

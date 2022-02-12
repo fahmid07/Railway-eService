@@ -26,4 +26,12 @@ public class dashboard {
         mainStage.getScene().setRoot(window);
     }
     
+    public void CoachviewButton(Event event) throws IOException{
+        Parent window;
+        window = FXMLLoader.load(getClass().getResource("coachview.fxml"));
+
+        Stage mainStage;
+        mainStage = App.parentWindow;
+        mainStage.getScene().setRoot(window);
+    }
 }

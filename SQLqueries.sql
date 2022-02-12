@@ -67,5 +67,11 @@ insert into train(t_name, from_st, to_st, startTime, endTime) values
 ('Shubarna Express', 7001, 7000, '16:30:00', '21:50:00'),
 ('Turna Express', 7001, 7000, '23:30:00', '06:20:00');
 
+insert into train(t_name, from_st, to_st, startTime, endTime) values
+('Bijoy Express', 7000, 7002, '09:00:00', '17:35:00'),
+('Bijoy Express', 7002, 7000, '20:30:00', '05:30:00'),
+('Egaro Sindur Provati', 7002, 7001, '06:30:00', '10:40:00'),
+('Kishoreganj Express', 7001, 7002, '10:45:00', '15:00:00');
+
 drop table train
 Select * from train
