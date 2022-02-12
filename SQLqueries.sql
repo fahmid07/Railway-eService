@@ -38,13 +38,20 @@ Select * from station
 insert into station(s_name, s_master, sm_number) values
 ('Chittagong', 'Rafiq Uddin', '01876096638');
 
+insert into station(s_name, s_master, sm_number) values
+('Dhaka', 'Mushfiq Rahman', '01876096658'),
+('Kishoreganj', 'Fahad Hossain', '01876096698');
+
 create table train(
-	t_id int identity(7000, 1),
+	t_id int identity(3000, 1),
 	t_name varchar(256) not null,
 	from_st int not null,
-	to_st int not null
+	to_st int not null,
+	startTime time,
+	endTime time
 	
 	constraint pk_tid primary key(t_id),
 );
+
 drop table train
 Select * from train
