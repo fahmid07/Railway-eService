@@ -32,8 +32,6 @@ public class App extends Application{
         /*
         String sql = "insert into \"user\"(name, email, mobile, pass) values('Fahmidur Rahman', 'fahmidurrahman07@gmail.com', '01876096648', 'etaami');";
         DBConnector connector = new DBConnector();
-        
-        
         connector.createStatement().executeUpdate(sql);
         */
     }
