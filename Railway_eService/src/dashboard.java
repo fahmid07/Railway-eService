@@ -34,4 +34,13 @@ public class dashboard {
         mainStage = App.parentWindow;
         mainStage.getScene().setRoot(window);
     }
+    
+    public void InfoButton(Event event) throws IOException{
+        Parent window;
+        window = FXMLLoader.load(getClass().getResource("info.fxml"));
+
+        Stage mainStage;
+        mainStage = App.parentWindow;
+        mainStage.getScene().setRoot(window);
+    }
 }

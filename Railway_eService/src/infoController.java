@@ -17,7 +17,16 @@ public class infoController implements Initializable{
 
     public void SearchButton(Event event) throws IOException {
         Parent window;
-        window = FXMLLoader.load(getClass().getResource("SignIn.fxml"));
+        window = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
+
+        Stage mainStage;
+        mainStage = App.parentWindow;
+        mainStage.getScene().setRoot(window);
+    }
+
+    public void BackButton(Event event) throws IOException {
+        Parent window;
+        window = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
 
         Stage mainStage;
         mainStage = App.parentWindow;
