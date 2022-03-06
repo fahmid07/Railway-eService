@@ -75,3 +75,38 @@ insert into train(t_name, from_st, to_st, startTime, endTime) values
 
 drop table train
 Select * from train
+
+create table coach(
+	c_id int identity(10, 1),
+	c_name varchar(100)
+	
+	constraint pk_cid primary key(c_id)
+);
+
+insert into coach(c_name) values
+('Snighdha'),
+('Shovon Chair'),
+('Shovon')
+;
+
+drop table coach
+Select * from coach
+
+create table journey(
+	j_id int identity(9000, 1),
+	j_train int not null,
+	j_date Date not null,
+	j_coach int not null,
+	j_vacancy int not null
+	
+	constraint pk_jid primary key(j_id),
+	constraint uq_journey unique(j_train, j_date, j_coach)
+);
+
+insert into journey(j_train, j_date, j_coach, j_vacancy) values
+(3000, '3/8/2022', 10, 35),
+(3000, '3/8/2022', 11, 35)
+;
+
+drop table journey
+Select * from journey

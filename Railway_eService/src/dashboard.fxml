@@ -43,7 +43,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="153.0" layoutY="184.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="109.0" stylesheets="@style.css" text="Purchase" textFill="WHITE">
+      <Button layoutX="153.0" layoutY="184.0" mnemonicParsing="false" onAction="#PurchaseButton" prefHeight="58.0" prefWidth="109.0" stylesheets="@style.css" text="Purchase" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

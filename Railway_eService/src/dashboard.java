@@ -43,4 +43,13 @@ public class dashboard {
         mainStage = App.parentWindow;
         mainStage.getScene().setRoot(window);
     }
+
+    public void PurchaseButton(Event event) throws IOException{
+        Parent window;
+        window = FXMLLoader.load(getClass().getResource("purchase.fxml"));
+
+        Stage mainStage;
+        mainStage = App.parentWindow;
+        mainStage.getScene().setRoot(window);
+    }
 }

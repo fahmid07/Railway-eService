@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="purchaseController">
    <children>
       <ImageView fitHeight="111.0" fitWidth="258.0" layoutX="221.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -45,5 +44,6 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <Button layoutX="41.0" layoutY="49.0" mnemonicParsing="false" onAction="#BackButton" prefHeight="43.0" prefWidth="84.0" text="Back" />
    </children>
 </AnchorPane>
