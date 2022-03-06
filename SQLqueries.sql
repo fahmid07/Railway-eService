@@ -114,8 +114,6 @@ insert into journey(j_train, j_date, j_coach, j_vacancy) values
 drop table journey
 Select * from journey
 
-select * from journey join train on journey.j_train=train.t_id
-join coach on coach.c_id=journey.j_coach
-where from_st=7000 and to_st=7001 and j_date='2022-08-03'
+select * from journey join train on journey.j_train=train.t_id join coach on coach.c_id=journey.j_coach where from_st=7000 and to_st=7001 and j_date='2022-08-03'
 
 select s_id from station where s_name='Dhaka'
