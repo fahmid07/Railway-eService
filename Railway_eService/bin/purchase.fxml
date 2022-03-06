@@ -21,20 +21,20 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="304.0" layoutY="143.0" prefHeight="26.0" prefWidth="258.0" />
+      <ChoiceBox fx:id="fromstFX" layoutX="304.0" layoutY="143.0" prefHeight="26.0" prefWidth="258.0" />
       <Label layoutX="137.0" layoutY="192.0" text="To Station: ">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="304.0" layoutY="195.0" prefHeight="26.0" prefWidth="258.0" />
+      <ChoiceBox fx:id="tostFX" layoutX="304.0" layoutY="195.0" prefHeight="26.0" prefWidth="258.0" />
       <Label layoutX="137.0" layoutY="238.0" text="Journey Date:">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
       <DatePicker layoutX="304.0" layoutY="241.0" prefHeight="26.0" prefWidth="258.0" />
-      <Button layoutX="264.0" layoutY="301.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="172.0" text="Search Train">
+      <Button layoutX="264.0" layoutY="301.0" mnemonicParsing="false" onAction="#SearchButton" prefHeight="40.0" prefWidth="172.0" text="Search Train">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
