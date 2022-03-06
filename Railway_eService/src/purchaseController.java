@@ -100,14 +100,15 @@ public class purchaseController implements Initializable{
         date = dateFX.getValue().toString();
 
         if(from != null && to != null && date != null){
-            DateFormat originalFormat = new SimpleDateFormat("MM/dd/yyyy");
-            DateFormat targetFormat = new SimpleDateFormat("yyyy-MM-dd");
-            Date d = (Date) originalFormat.parse(date);
-            formattedDate = targetFormat.format(d);
+            //DateFormat originalFormat = new SimpleDateFormat("MM/dd/yyyy");
+            //DateFormat targetFormat = new SimpleDateFormat("yyyy-MM-dd");
+            //Date d = (Date) originalFormat.parse(date);
+            //formattedDate = targetFormat.format(d);
+            formattedDate = date;
             System.out.println(formattedDate);
 
             Parent window;
-            window = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
+            window = FXMLLoader.load(getClass().getResource("tarins.fxml"));
 
             Stage mainStage;
             mainStage = App.parentWindow;

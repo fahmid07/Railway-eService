@@ -33,13 +33,13 @@
             <Font size="22.0" />
          </font>
       </Label>
-      <DatePicker layoutX="304.0" layoutY="241.0" prefHeight="26.0" prefWidth="258.0" />
-      <Button layoutX="264.0" layoutY="301.0" mnemonicParsing="false" onAction="#SearchButton" prefHeight="40.0" prefWidth="172.0" text="Search Train">
+      <DatePicker fx:id="dateFX" layoutX="304.0" layoutY="241.0" prefHeight="26.0" prefWidth="258.0" />
+      <Button layoutX="264.0" layoutY="323.0" mnemonicParsing="false" onAction="#SearchButton" prefHeight="40.0" prefWidth="172.0" text="Search Train">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Label layoutX="58.0" layoutY="409.0" text="Recent Searches:">
+      <Label layoutX="283.0" layoutY="414.0" text="Recent Searches:">
          <font>
             <Font size="18.0" />
          </font>

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tarinsController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trainsController">
    <children>
       <ImageView fitHeight="114.0" fitWidth="267.0" layoutX="217.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -25,7 +25,7 @@
             <TableColumn fx:id="fareFX" prefWidth="133.60001220703123" text="Fare" />
         </columns>
       </TableView>
-      <Button layoutX="36.0" layoutY="29.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Cancel" />
+      <Button layoutX="36.0" layoutY="29.0" mnemonicParsing="false" onAction="#CancelButton" prefHeight="40.0" prefWidth="90.0" text="Cancel" />
       <Label fx:id="fromFX" layoutX="53.0" layoutY="103.0" text="From:">
          <font>
             <Font name="System Bold" size="16.0" />
