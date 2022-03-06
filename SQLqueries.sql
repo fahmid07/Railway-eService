@@ -30,7 +30,8 @@ create table station(
 	
 	constraint pk_sid primary key(s_id),
 	constraint chk_sm_number check(len(sm_number) = 11 and sm_number like '01%'),
-	constraint uq_sm_number unique(sm_number) 
+	constraint uq_sm_number unique(sm_number),
+	constraint uq_st unique(s_name) 
 );
 drop table station
 Select * from station
@@ -78,15 +79,17 @@ Select * from train
 
 create table coach(
 	c_id int identity(10, 1),
-	c_name varchar(100)
+	c_name varchar(100),
+	c_fare int not null
 	
-	constraint pk_cid primary key(c_id)
+	constraint pk_cid primary key(c_id),
+	constraint uq_cn unique(c_name) 
 );
 
-insert into coach(c_name) values
-('Snighdha'),
-('Shovon Chair'),
-('Shovon')
+insert into coach(c_name, c_fare) values
+('Snighdha', 620),
+('Shovon Chair', 480),
+('Shovon', 350)
 ;
 
 drop table coach

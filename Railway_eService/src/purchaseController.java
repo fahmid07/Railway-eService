@@ -30,6 +30,10 @@ public class purchaseController implements Initializable{
     public static ArrayList<String> st1 = new ArrayList<>();
     public static ArrayList<String> st2 = new ArrayList<>();
 
+    public static String from = null;
+    public static String to = null;
+    public static String date = null;
+    public static String formattedDate = null;
 
     public void BackButton(Event event) throws IOException {
         Parent window;
@@ -91,16 +95,23 @@ public class purchaseController implements Initializable{
     }
 
     public void SearchButton(Event event) throws IOException, ParseException {
-        DateFormat originalFormat = new SimpleDateFormat("MM/dd/yyyy");
-        DateFormat targetFormat = new SimpleDateFormat("yyyy-MM-dd");
-        Date date = (Date) originalFormat.parse("August 21, 2012");
-        String formattedDate = targetFormat.format(date);
-        
-        Parent window;
-        window = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
+        from = fromstFX.getValue();
+        to = tostFX.getValue();
+        date = dateFX.getValue().toString();
 
-        Stage mainStage;
-        mainStage = App.parentWindow;
-        mainStage.getScene().setRoot(window);
+        if(from != null && to != null && date != null){
+            DateFormat originalFormat = new SimpleDateFormat("MM/dd/yyyy");
+            DateFormat targetFormat = new SimpleDateFormat("yyyy-MM-dd");
+            Date d = (Date) originalFormat.parse(date);
+            formattedDate = targetFormat.format(d);
+            System.out.println(formattedDate);
+
+            Parent window;
+            window = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
+
+            Stage mainStage;
+            mainStage = App.parentWindow;
+            mainStage.getScene().setRoot(window);
+        }
     }
 }
