@@ -108,7 +108,7 @@ public class purchaseController implements Initializable{
             System.out.println(formattedDate);
 
             Parent window;
-            window = FXMLLoader.load(getClass().getResource("tarins.fxml"));
+            window = FXMLLoader.load(getClass().getResource("trains.fxml"));
 
             Stage mainStage;
             mainStage = App.parentWindow;
