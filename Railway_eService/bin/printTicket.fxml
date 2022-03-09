@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="myPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="printTicketController">
+   <children>
+      <ImageView fitHeight="660.0" fitWidth="786.0" layoutX="-80.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bg2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="105.0" fitWidth="262.0" layoutX="42.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="fromtxt" layoutX="42.0" layoutY="196.0" text="From: Dhaka">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="totxt" layoutX="42.0" layoutY="228.0" text="To: Chittagong">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="traintxt" layoutX="42.0" layoutY="261.0" text="Train: Shonar Bangla">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="classtxt" layoutX="42.0" layoutY="296.0" text="Class: F_BIRTH">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="datetxt" layoutX="42.0" layoutY="331.0" text="Date: 07/10/2022">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="departuretxt" layoutX="42.0" layoutY="364.0" text="Departure: 08:00 AM">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="seats" layoutX="42.0" layoutY="397.0" text="No. of Seats:">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="511.0" layoutY="409.0" mnemonicParsing="false" onAction="#PrintButton" prefHeight="44.0" prefWidth="126.0" text="Print/Save">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Button>
+      <Label fx:id="tfaretxt" layoutX="42.0" layoutY="431.0" text="Total Fare: 620">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="tickettxt" layoutX="42.0" layoutY="162.0" text="Ticket Number: ">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="nametxt" layoutX="42.0" layoutY="130.0" text="Name: Fahmid">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

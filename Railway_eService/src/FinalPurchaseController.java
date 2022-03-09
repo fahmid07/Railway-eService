@@ -1,6 +1,7 @@
 import java.beans.EventHandler;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
@@ -10,18 +11,20 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.print.PrinterJob;
 import javafx.scene.Parent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class FinalPurchaseController implements Initializable{
 
     public Label fromtxt, totxt, datetxt, classtxt, departuretxt, errortxt, tfaretxt, traintxt;
     public ComboBox<String> seats;
-
+    public AnchorPane myPane;
     ObservableList<String> noOfSeats = FXCollections.observableArrayList("1", "2", "3", "4");
-
+    public static int no_seats, total_fare, t_id;
     
 
     @Override
@@ -72,8 +75,8 @@ public class FinalPurchaseController implements Initializable{
             errortxt.setText("Number of seats available");
         }
         else {
-            int no_seats = Integer.parseInt(seats.getValue());
-            int total_fare = no_seats * TrainsController.selected.c_fare;
+            no_seats = Integer.parseInt(seats.getValue());
+            total_fare = no_seats * TrainsController.selected.c_fare;
 
             String query = "insert into ticket(tk_j_id, tk_u_id, tk_seats, tk_fare) values(" + TrainsController.selected.j_id + ", " + SignInController.uid + ", " + no_seats + ", " + total_fare + ");";
             DBConnector conn = new DBConnector();
@@ -81,8 +84,14 @@ public class FinalPurchaseController implements Initializable{
 
             String query2 = "update journey set j_vacancy = j_vacancy - " + no_seats + " where j_id = " + TrainsController.selected.j_id + ";";
             conn.createStatement().executeUpdate(query2);
+
+            String query3 = "select tk_id from ticket where tk_u_id=" + SignInController.uid + " Order by tk_id DESC";
+            ResultSet resultSet = conn.createStatement().executeQuery(query3);
+            resultSet.next();
+            t_id = resultSet.getInt("tk_id");
+
             Parent window;
-            window = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
+            window = FXMLLoader.load(getClass().getResource("printTicket.fxml"));
 
             Stage mainStage;
             mainStage = App.parentWindow;
