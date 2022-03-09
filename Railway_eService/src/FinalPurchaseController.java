@@ -1,6 +1,7 @@
 import java.beans.EventHandler;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -34,7 +35,7 @@ public class FinalPurchaseController implements Initializable{
         tfaretxt.setText("Fare: " + TrainsController.selected.c_fare);
         traintxt.setText("Train: " + TrainsController.selected.t_name);
         seats.setItems(noOfSeats);
-
+        errortxt.setText("");
         
     }
     
@@ -62,12 +63,31 @@ public class FinalPurchaseController implements Initializable{
         mainStage.getScene().setRoot(window);
     }
 
-    public void PurchaseButton(Event event) throws IOException {
-        Parent window;
-        window = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
+    public void PurchaseButton(Event event) throws IOException, SQLException {
 
-        Stage mainStage;
-        mainStage = App.parentWindow;
-        mainStage.getScene().setRoot(window);
+        if(seats.getValue() == null) {
+            errortxt.setText("Please select a seat");
+        }
+        else if(Integer.parseInt(seats.getValue())>TrainsController.selected.j_vacancy) {
+            errortxt.setText("Number of seats available");
+        }
+        else {
+            int no_seats = Integer.parseInt(seats.getValue());
+            int total_fare = no_seats * TrainsController.selected.c_fare;
+
+            String query = "insert into ticket(tk_j_id, tk_u_id, tk_seats, tk_fare) values(" + TrainsController.selected.j_id + ", " + SignInController.uid + ", " + no_seats + ", " + total_fare + ");";
+            DBConnector conn = new DBConnector();
+            conn.createStatement().executeUpdate(query); 
+
+            String query2 = "update journey set j_vacancy = j_vacancy - " + no_seats + " where j_id = " + TrainsController.selected.j_id + ";";
+            conn.createStatement().executeUpdate(query2);
+            Parent window;
+            window = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
+
+            Stage mainStage;
+            mainStage = App.parentWindow;
+            mainStage.getScene().setRoot(window);
+        }
+        
     }
 }

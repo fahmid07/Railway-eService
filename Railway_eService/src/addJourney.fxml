@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="510.0" prefWidth="706.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="AddJourneyController">
+   <children>
+      <ImageView fx:id="trainNameText" fitHeight="510.0" fitWidth="724.0" layoutX="4.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bg.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#2f5597" layoutX="298.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Journey">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button layoutX="77.0" layoutY="73.0" mnemonicParsing="false" onAction="#BackButton" prefHeight="32.0" prefWidth="74.0" text="Back" textFill="#2f5597">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="307.0" layoutY="421.0" mnemonicParsing="false" onAction="#SaveButton" prefHeight="40.0" prefWidth="89.0" text="SAVE" />
+      <TextField fx:id="vacancyText" layoutX="260.0" layoutY="328.0" prefHeight="40.0" prefWidth="186.0" promptText="Vacancy" />
+      <DatePicker fx:id="journeyDatePicker" layoutX="259.0" layoutY="186.0" prefHeight="40.0" prefWidth="186.0" promptText="Journey Date" />
+      <ComboBox fx:id="trainNameBox" layoutX="259.0" layoutY="109.0" prefHeight="40.0" prefWidth="186.0" promptText="Train Name" />
+      <ComboBox fx:id="coachNameText" layoutX="260.0" layoutY="257.0" prefHeight="40.0" prefWidth="186.0" promptText="Coach Name" />
+   </children>
+</AnchorPane>

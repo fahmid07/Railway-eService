@@ -52,4 +52,15 @@ public class dashboard {
         mainStage = App.parentWindow;
         mainStage.getScene().setRoot(window);
     }
+
+
+    public void ContactsButton(Event event) throws IOException{
+        Parent window;
+        window = FXMLLoader.load(getClass().getResource("contact.fxml"));
+
+        Stage mainStage;
+        mainStage = App.parentWindow;
+        mainStage.getScene().setRoot(window);
+    }
+
 }

@@ -58,4 +58,13 @@ public class SignInController {
         mainStage = App.parentWindow;
         mainStage.getScene().setRoot(window);
     }
+
+    public void adminLoginButton(Event event) throws IOException{
+        Parent window;
+        window = FXMLLoader.load(getClass().getResource("adminLogin.fxml"));
+
+        Stage mainStage;
+        mainStage = App.parentWindow;
+        mainStage.getScene().setRoot(window);
+    }
 }

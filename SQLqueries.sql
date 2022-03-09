@@ -86,14 +86,35 @@ create table coach(
 	constraint uq_cn unique(c_name) 
 );
 
-insert into coach(c_name, c_fare) values
-('Snighdha', 620),
-('Shovon Chair', 480),
-('Shovon', 350)
-;
+insert into coach(c_name, c_fare) values 
+('SNIGDHA', 620), 
+('S_CHAIR', 480), 
+('SHOVAN', 350), 
+('F_CHAIR', 520), 
+('AC_S', 700), 
+('F_SEAT', 600) ;
+
 
 drop table coach
 Select * from coach
+
+
+create table adminn(
+	username varchar(11) not null,
+	pass varchar(20) not null
+	
+	
+	constraint pk_username primary key(username),
+	constraint chck_pass check(len(pass) >= 6)	
+);
+
+
+insert into adminn values
+('admin','admin00');
+
+select * from adminn;
+
+
 
 create table journey(
 	j_id int identity(9000, 1),
@@ -119,3 +140,23 @@ select * from journey join train on journey.j_train=train.t_id join coach on coa
 select s_id from station where s_name='Dhaka'
 
 select s_id from station where s_name='Chittagong'
+
+create table ticket(
+	tk_id int identity(5000, 1),
+	tk_j_id int not null,
+	tk_u_id int not null,
+	tk_seats int not null,
+	tk_fare int not null
+	
+	constraint pk_tkid primary key(tk_id)
+);
+
+drop table ticket
+Select * from ticket
+
+
+
+
+insert into ticket(tk_j_id, tk_u_id, tk_seats, tk_fare) values(9000, 10, 1, 620);
+
+select * from ticket join journey on journey.j_id=ticket.tk_j_id
