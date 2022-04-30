@@ -1,4 +1,3 @@
-import java.beans.EventHandler;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
@@ -11,7 +10,6 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.print.PrinterJob;
 import javafx.scene.Parent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;

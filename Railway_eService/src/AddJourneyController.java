@@ -9,7 +9,6 @@ import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -43,7 +42,6 @@ public class AddJourneyController implements Initializable {
     private TextField vacancyText;
     @FXML
     private DatePicker journeyDatePicker;
-    private ComboBox<String> fromStationBox;
     @FXML
     private ComboBox<String> trainNameBox;
 

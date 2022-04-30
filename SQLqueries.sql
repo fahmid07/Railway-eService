@@ -160,3 +160,5 @@ Select * from ticket
 insert into ticket(tk_j_id, tk_u_id, tk_seats, tk_fare) values(9000, 10, 1, 620);
 
 select * from ticket join journey on journey.j_id=ticket.tk_j_id
+
+select tk_id from ticket where tk_u_id=10 Order by tk_id DESC
